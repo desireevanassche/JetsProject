@@ -4,96 +4,92 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.skilldistillery.jets.entities.Airfield;
+import com.skilldistillery.jets.entities.CargoPlane;
+import com.skilldistillery.jets.entities.FighterJet;
 import com.skilldistillery.jets.entities.Jet;
 
 public class JetsApplication {
-	
-	Airfield af;
+
+	private Airfield af;
 	Scanner kb = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
+
 		JetsApplication jetsApp = new JetsApplication();
-				
-		
-	jetsApp.launch();
+
+		jetsApp.launch();
 
 	}
 
 	public void launch() {
-	af = new Airfield();
+
+		af = new Airfield();
+
 		menu();
 	}
 
 	private void menu() {
+		boolean menuLoop = true;
+		while (menuLoop) {
 
 		System.out.println("MENU OPTIONS EDIT ME ****");
 		System.out.println();
 		System.out.println("1. List fleet ");
 		System.out.println("2. Fly all jets");
 		System.out.println("3. View fastest Jet");
-		System.out.print("4. View jet with longest range ");
+		System.out.println("4. View jet with longest range ");
 		System.out.println("5. Load all Cargo Jets");
 		System.out.println("6. Dogfight!");
 		System.out.println("7. Add a jet to Fleet");
 		System.out.println("8. Remove a Jet from the Fleet ");
 		System.out.println("9. Quit");
-		boolean menuLoop = true;
-		while (menuLoop) {
 
 			int menuChoice = kb.nextInt();
 
+			if (menuChoice > 0 || menuChoice <= 10) {
+				
 			switch (menuChoice) {
 
 			case 1:
-				System.out.println("Here is our Fleet:  ");
-				 System.out.println(af.list());
+				af.printJetFleet();
 
 				break;
 
 			case 2:
-				System.out.println("Flying all jets!");
-				System.out.println();
+
+				af.flyJets();
 
 				break;
 
 			case 3:
-				System.out.println("Here is our fastest Jet: ");
-				System.out.println();
+
+				af.fastestJet();
 
 				break;
 
 			case 4:
 
-				System.out.println("Our jet with the longest range is: ");
-				System.out.println();
-
+				af.longestRange();
 				break;
 
 			case 5:
 
-				System.out.println("Loading All Cargo Jets! ");
-				System.out.println();
+				af.loadCargo();
 
 				break;
 
 			case 6:
-
-				System.out.println("Dogfight!  ");
-				System.out.println();
+				af.combatReady();
 
 				break;
 
 			case 7:
 
-				System.out.println("What Jet would you like to add to the Fleet? ");
-				System.out.println();
-				break;
+				af.addJet();
 
 			case 8:
 
-				System.out.println("Which jet would you like to remove? ");
-				System.out.println();
+				af.removeJet();
 
 				break;
 
@@ -110,6 +106,7 @@ public class JetsApplication {
 
 			}
 
+			}
 		}
 
 	}
