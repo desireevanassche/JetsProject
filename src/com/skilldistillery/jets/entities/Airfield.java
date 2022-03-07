@@ -123,7 +123,6 @@ public class Airfield {
 
 		System.out.println("What is the model of the jet you want to add? ");
 		String modelAdd = kb.nextLine();
-		kb.nextLine();
 
 		System.out.println("What is the speed of this jet?");
 		Double speedAdd = kb.nextDouble();
