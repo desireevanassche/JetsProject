@@ -123,7 +123,6 @@ public class Airfield {
 
 		System.out.println("What is the model of the jet you want to add? ");
 		String modelAdd = kb.nextLine();
-		kb.next();
 
 		System.out.println("What is the speed of this jet?");
 		Double speedAdd = kb.nextDouble();
@@ -140,9 +139,11 @@ public class Airfield {
 		System.out.println("The fleet with " + modelAdd + ":");
 		for (Jet jet : jetFleet) {
 			System.out.println(jet);
+					
 		}
 
 	}
+
 
 	public void removeJet() {
 
@@ -164,5 +165,5 @@ public class Airfield {
 		this.jetFleet = jetFleet;
 
 	}
+	}
 
-}

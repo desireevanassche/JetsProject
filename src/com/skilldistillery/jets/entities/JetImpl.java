@@ -17,8 +17,8 @@ public class JetImpl extends Jet {
 	}
 	@Override
 	public String toString() {
-		return "User Jet Model: " + getModel() + " Speed: " + getSpeed() + " Range: " + getRange()
-		+ " Price: " + getPrice();
+		return "\nUser Jet Model: " + getModel() + " Speed: " + getSpeed() + " Range: " + getRange()
+		+ " Price: " + getPrice() + "\n";
 	}
 
 

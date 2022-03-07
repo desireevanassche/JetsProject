@@ -18,7 +18,7 @@ private boolean canLoad;
 
 	@Override
 	public String flyJets() {
-		return getModel() + " preparing for take off ... and we are off!" + "\nThere is enough fuel in the " + getModel() + " for approximately " + Math.round(getRange()/getSpeed()) + " hours of flight\n";
+		return getModel() + " preparing for take off ... and we are off!" + "\nThere is enough fuel in the " + getModel() + " for approximately " + Math.round(getRange()/getSpeed()) + " hours of flight.\n With a range of " + getRange() + " and a speed of " + getSpeed() + ".\n";
 	}
 
 	@Override

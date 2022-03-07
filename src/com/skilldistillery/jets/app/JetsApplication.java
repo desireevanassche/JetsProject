@@ -31,80 +31,82 @@ public class JetsApplication {
 	private void menu() {
 		boolean menuLoop = true;
 		while (menuLoop) {
-
-		System.out.println("MENU OPTIONS EDIT ME ****");
-		System.out.println();
-		System.out.println("1. List fleet ");
-		System.out.println("2. Fly all jets");
-		System.out.println("3. View fastest Jet");
-		System.out.println("4. View jet with longest range ");
-		System.out.println("5. Load all Cargo Jets");
-		System.out.println("6. Dogfight!");
-		System.out.println("7. Add a jet to Fleet");
-		System.out.println("8. Remove a Jet from the Fleet ");
-		System.out.println("9. Quit");
+			System.out.println("-------------------------------------");
+			System.out.println("      Welcome to Jets Project!       ");
+			System.out.println("_____________________________________");
+			System.out.println("1. List fleet ");
+			System.out.println("2. Fly all jets");
+			System.out.println("3. View fastest Jet");
+			System.out.println("4. View jet with longest range ");
+			System.out.println("5. Load all Cargo Jets");
+			System.out.println("6. Dogfight!");
+			System.out.println("7. Add a jet to Fleet");
+			System.out.println("8. Remove a Jet from the Fleet ");
+			System.out.println("9. Quit");
+			System.out.println("-------------------------------------");
 
 			int menuChoice = kb.nextInt();
 
 			if (menuChoice > 0 || menuChoice <= 10) {
-				
-			switch (menuChoice) {
 
-			case 1:
-				af.printJetFleet();
+				switch (menuChoice) {
 
-				break;
+				case 1:
+					af.printJetFleet();
 
-			case 2:
+					break;
 
-				af.flyJets();
+				case 2:
 
-				break;
+					af.flyJets();
 
-			case 3:
+					break;
 
-				af.fastestJet();
+				case 3:
 
-				break;
+					af.fastestJet();
 
-			case 4:
+					break;
 
-				af.longestRange();
-				break;
+				case 4:
 
-			case 5:
+					af.longestRange();
+					break;
 
-				af.loadCargo();
+				case 5:
 
-				break;
+					af.loadCargo();
 
-			case 6:
-				af.combatReady();
+					break;
 
-				break;
+				case 6:
+					af.combatReady();
 
-			case 7:
+					break;
 
-				af.addJet();
+				case 7:
 
-			case 8:
+					af.addJet();
+					break;
 
-				af.removeJet();
+				case 8:
 
-				break;
+					af.removeJet();
 
-			case 9:
+					break;
 
-				System.out.println("Good bye! ");
+				case 9:
 
-				menuLoop = false;
-				break;
+					System.out.println("Good bye! ");
 
-			default:
-				System.out.println("Invalid entry, pleaase try again. ");
-				break;
+					menuLoop = false;
+					break;
 
-			}
+				default:
+					System.out.println("Invalid entry, pleaase try again. ");
+					break;
+
+				}
 
 			}
 		}

@@ -15,7 +15,7 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	public String flyJets() {
-		return "Alpha strike initiated! " + getModel() + " has launched. " +  "\nThere is enough fuel in the " + getModel() + " for approximately " + Math.round(getRange()/getSpeed()) + " hours of flight\n";
+		return "Alpha strike initiated! " + getModel() + " has launched. " +  "\nThere is enough fuel in the " + getModel() + " for approximately " + Math.round(getRange()/getSpeed()) + " hours of flight.\nWith a range of " + getRange() + " and a speed of " + getSpeed() + ".\n";
 	}
 
 	@Override
