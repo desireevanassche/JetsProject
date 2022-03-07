@@ -12,13 +12,13 @@ private boolean canLoad;
 
 	@Override
 	public String toString() {
-		return "\nCargoPlane Model: " + getModel() + " Speed: " + getSpeed() + " Range: " + getRange() + " Price "
+		return "CargoPlane Model: " + getModel() + " Speed: " + getSpeed() + " Range: " + getRange() + " Price "
 				+ getPrice();
 	}
 
 	@Override
 	public String flyJets() {
-		return getModel() + " preparing for take off ... and we are off!" + "\nThere is enough fuel in the " + getModel() + " for approximately " + Math.round(getRange()/getSpeed()) + " hours of flight.\n With a range of " + getRange() + " and a speed of " + getSpeed() + ".\n";
+		return getModel() + " preparing for take off ... and we are off!" + "\nThere is enough fuel in the " + getModel() + " for approximately " + Math.round(getRange()/getSpeed()) + " hours of flight.\n With a range of " + getRange() + " and a speed of " + getSpeed() + ".";
 	}
 
 	@Override
